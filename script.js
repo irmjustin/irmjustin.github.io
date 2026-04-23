@@ -1,12 +1,4 @@
-const avatar = document.getElementById("avatar");
-
-avatar.addEventListener("mouseover",function(){
-    avatar.classList.add("jump-animation")
-});
-
-avatar.addEventListener("animationend",function(){
-   avatar.classList.remove("jump-animation")
-});
+var avatar = document.getElementById("avatar");
 
 var instaIcon = document.getElementById("insta_icon");
 
@@ -14,18 +6,19 @@ var xIcon = document.getElementById("x_icon");
 
 var ghIcon = document.getElementById("github_icon");
 
-function iconMovement(element){
+function elementsAnimation(element,animationName){
 
     element.addEventListener("mouseover",function(){
-        element.classList.add("moveIcon-animation");
+        element.classList.add(animationName);
     });
     element.addEventListener("animationend",function(){
-        element.classList.remove("moveIcon-animation")
+        element.classList.remove(animationName)
     });
 }
-iconMovement(instaIcon);
-iconMovement(xIcon);
-iconMovement(ghIcon);
+elementsAnimation(instaIcon,"moveIcon-animation");
+elementsAnimation(xIcon,"moveIcon-animation");
+elementsAnimation(ghIcon,"moveIcon-animation");
+elementsAnimation(avatar,"jump-animation");
 
 
 const toggle = document.getElementById("modeToggle");
