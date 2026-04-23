@@ -1,12 +1,5 @@
 var avatar = document.getElementById("avatar");
-
-var instaIcon = document.getElementById("insta_icon");
-
-var xIcon = document.getElementById("x_icon");
-
-var ghIcon = document.getElementById("github_icon");
-
-var icons  = [instaIcon , xIcon , ghIcon];
+var icons = document.querySelectorAll(".social-icon");
 
 function elementsAnimation(element,animationName){
 
