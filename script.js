@@ -6,6 +6,8 @@ var xIcon = document.getElementById("x_icon");
 
 var ghIcon = document.getElementById("github_icon");
 
+var icons  = [instaIcon , xIcon , ghIcon];
+
 function elementsAnimation(element,animationName){
 
     element.addEventListener("mouseover",function(){
@@ -15,9 +17,9 @@ function elementsAnimation(element,animationName){
         element.classList.remove(animationName)
     });
 }
-elementsAnimation(instaIcon,"moveIcon-animation");
-elementsAnimation(xIcon,"moveIcon-animation");
-elementsAnimation(ghIcon,"moveIcon-animation");
+icons.forEach(function(icon){
+    elementsAnimation(icon,"moveIcon-animation");
+});
 elementsAnimation(avatar,"jump-animation");
 
 
