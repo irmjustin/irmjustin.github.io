@@ -43,9 +43,9 @@ const toggle = document.getElementById("modeToggle");
 toggle.addEventListener("click",function(){
     document.body.classList.toggle("light-mode");
     if(document.body.classList.contains("light-mode")){
-        toggle.src = "Images/light-mode.png"
+        toggle.src = "assets/Icons/light-mode.png"
     }
     else {
-        toggle.src = "Images/moon.png"
+        toggle.src = "assets/Icons/moon.png"
     }
 });
